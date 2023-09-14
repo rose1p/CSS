@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .p{
+                display: inline-block;
+                border: 1px solid;
+                border-radius: 5px;
+                padding: 5px;
+            }
+        </style>
+        <script>
+            <function changeImage(imageUr1, textE1ement) {
+                var img = document.getElementById("myImg");
+                img.src = imageUr1;
+
+                var textCon = document.getElementsByClassName("text-container");
+                for(var i = 0; i < textCon.length; i++) {
+                    textCon[i].
+                }
+
+                textE1ement.classList.add("selected");
+           
+                img.onload = function() {
+                    var mySpan = document.getElementById("mySpan");
+                    mySpan.innerHTML = img.width + "x" + img.height;
+                }
+            }
+
+            window.onload = function() {
+                var textCon = document.getElementById("appleText");
+                textCon.classList.add("selected");
+                changeImage('apple.png', textCon);
+            }
+        </script>
+    </head>
+    <body onload="changeImage()">
+        <p class="p" id="apple">apple</p>
+        <p class="p" id="bonana">banana</p>
+        <p class="p" id="mango">mango</p>
+
+        <div class="text-container" id="appleText" onmouseover="change"
+
+
+        <img id="myImg" src="">
+        <p>이미지 크기 : <span id = "mySpan"></span></p>
+    </body>

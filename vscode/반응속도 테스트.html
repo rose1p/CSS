@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head><title>반응속도 테스트</title></head>
+
+    <body>
+        <h2>반응속도 테스트</h2>
+
+        <p id = "ready">Get ready...</p>
+        <p id = "result"></p>
+
+        <script> 
+            var ready = document.getElementById("ready");
+            var result = document.getElementById("result");
+
+            var alphabet ='abcdefghijklmnopqrstuvwxyz';
+            var randLetter = alphabet[Math.floor(Math.random()*alphabet.length)]
+
+        srtTimeout(function(){           
+            ready.textContent = "Please Press : " + randLetter;
+            var startTime = Date.now();
+
+            document.addEventListener('keydown', function(event) {
+                if(event.key === randLetter) {
+                    var endTime = Date.now();
+                    var time = (endTime - startTime) / 1000;
+                    result.textContent = "정답입니다! 걸린시간 : " + time + "초";
+                }else {
+                    result.textContent = "오답입니다!";
+                }
+            });
+        }, 2000);
+        </script>
+    </body>
+</html>

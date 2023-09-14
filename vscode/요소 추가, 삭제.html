@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+           /* var newDIV = document.createElement("li");
+            newDIV.innerHTML = "Orange";
+            newDIV.setAttribute("id", "myDIV");
+            newDIV.style.dackgroundColor = "yellow";
+
+            var p = document.getElementByld("p");
+            p.appendChild(newDIV);
+
+            var myDIV = document.getElementByld("myDIV");
+            var parent = myDIV.parentElement;
+            parent.removeChild(myDIV); */
+        function change() {
+            var ullst = document.createElement("li");
+            ullst.textContent = "Orange";
+            document.getElementByld("list").appandchild(ullst);
+        }
+
+            lst = document.getElementByID("list");
+                if(lst.lastChild) {
+                    lst.removeChild(lst.lastChild);
+            }
+
+            lst = document.getElementByTagName("li");
+                if(lst.lastChild > 0) {
+                    lastLst = lst[lst.length - 1];
+                    lastLst.parentElement.removeChild(lastLst);
+            }
+        </script>
+    </head>
+        <body>
+            <ul id="list">
+                <li>apple</li>
+                <li>banana</li>
+            </ul>
+
+            <p>
+                <input type="button" value="추가" onclick="change()">
+                <input type="button" value="삭제" onclick="change()">
+            </p>
+        </body>
+</html>
+
