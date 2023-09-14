@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head><title>글자 크기 자동으로 줄이기</title>
+    <style>
+        @teyframes textsize {
+            0% {font-size="500%";}
+            30% {font-size="250;"}
+            100% {font-size="100%"}
+        }
+        h3 {
+            animation-name : textsize;
+            animation-size 3s;
+            animation-iteration : infinite;
+        }
+        span {
+            transition: font-size 3s;
+        }
+        span:hover {
+            font-size : 500%;
+        }
+    </style></head>
+<body>
+    <h3>꽝!</h3>
+    <hr>
+</body>
+</html>
+

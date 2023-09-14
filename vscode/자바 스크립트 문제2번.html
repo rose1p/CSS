@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>문제 2번</title>
+    </head>
+        <body>
+            <script>
+                const str = prompt("문자를 입력하세요")
+                const reversed_str = str.split("").reverse().join("");
+                document.write(str + "<br>");
+                document.write(reversed_str + "<br>");
+
+                if (str == reversed_str) {
+                    document.write(true)
+                }
+                else {
+                    document.write(false)
+                }
+            </script>
+        </body>
+</html>
